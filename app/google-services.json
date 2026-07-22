@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "847041412462",
+    "project_id": "egexpensesv2",
+    "storage_bucket": "egexpensesv2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847041412462:android:ad93076b9199c2c002957f",
+        "android_client_info": {
+          "package_name": "np.com.eghomesat.expenses"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCvP6wFs1Yycrdo2atnfUhgZipxCDyZac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
