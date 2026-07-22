@@ -1,0 +1,9 @@
+- [ ] Security Hardening: Brute-force Protection
+    - [ ] Add `failedAttempts` and `lockoutUntil` to `ExpenseViewModel`
+    - [ ] Update `verifyPin` logic with cooldown check
+- [ ] Recovery Flow: Device Integrity UI
+    - [ ] Handle `DeviceWarning` in `PhoneVerificationScreen`
+- [ ] Data Management: Backup & Restore
+    - [ ] Create `BackupUtils.kt` for JSON Export/Import
+    - [ ] Wire up placeholders in `SettingsScreen`
+- [ ] Final Stability Check
