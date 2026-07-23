@@ -17,7 +17,10 @@ import androidx.navigation.NavController
 import np.com.eghomesat.expenses.data.Expense
 import np.com.eghomesat.expenses.ui.theme.*
 import np.com.eghomesat.expenses.viewmodel.ExpenseViewModel
+import dev.shivathapaa.nepalidatepickerkmp.calendar_model.NepaliDateConverter
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.ZoneId
 import java.util.Date
 import java.util.Locale
 
@@ -32,7 +35,17 @@ fun AddExpenseScreen(
     val expenses by viewModel.expenses.collectAsState()
     val categories by viewModel.categories.collectAsState()
 
-    var date by remember { mutableStateOf("2083-04-02") }
+    var date by remember {
+        val zoneId = ZoneId.of("Asia/Kathmandu")
+        val today = LocalDate.now(zoneId)
+        val nepaliDate = NepaliDateConverter.convertEnglishToNepali(
+            today.year,
+            today.monthValue,
+            today.dayOfMonth
+        )
+        val formattedDate = "${nepaliDate.year}-${nepaliDate.month.toString().padStart(2, '0')}-${nepaliDate.dayOfMonth.toString().padStart(2, '0')}"
+        mutableStateOf(formattedDate)
+    }
     var category by remember { mutableStateOf("") }
     var amount by remember { mutableStateOf("") }
     var remarks by remember { mutableStateOf("") }

@@ -74,6 +74,7 @@ dependencies {
     // Security & DataStore
     implementation(libs.androidx.security.crypto)
     implementation(libs.androidx.datastore.preferences)
+    implementation(libs.nepali.date.picker.core)
 
     // Serialization
     implementation(libs.kotlinx.serialization.json)
